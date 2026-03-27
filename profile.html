@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Tuqa AL-Dowikat</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">TUQA AL-DOWIKAT</div>
+            <nav class="nav"><a href="index.html">Home</a>
+                <a class="active" href="profile.html">Profile</a>
+                <a href="skills.html">Skills</a>
+                <a href="social.html">Social</a>
+                <a href="geeky.html">Geeky</a><a href="experience.html">Experience</a>
+            </nav>
+        </header>
+        <main class="page-content">
+            <section class="page-header">
+                <div class="panel">
+                    <span class="section-label">Profile</span>
+                    <h1 class="page-title">This is <span class="accent-sand">me</span>.</h1>
+                    <p class="page-copy">I am Tuqa AL-Dowikat, a Business Information Technology graduate who enjoys
+                        mixing logic with creativity. I like building things that feel useful, clear, and visually
+                        strong. I care about details, clean work, and making ideas look alive instead of plain and
+                        forgettable.</p>
+                    <p class="page-copy">As a person, I am curious, expressive, and always trying to improve. I enjoy
+                        design, tech, editing, and finding better ways to present ideas. I like projects that solve real
+                        problems but still have personality.</p>
+                </div>
+                <div class="panel avatar-panel"><img src="assets/img/con-laptop.png" alt="Confident Tuqa avatar" />
+                </div>
+            </section>
+            <section class="grid-3">
+                <div class="stat-card">
+                    <h3>Creative</h3>
+                    <p>I enjoy visual storytelling, editing, and building pages that feel memorable.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Practical</h3>
+                    <p>I prefer ideas that make life easier, clearer, and more useful in real situations.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Curious</h3>
+                    <p>I like learning tools, trying new styles, and improving work until it feels right.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        const revealElements = document.querySelectorAll(
+            ".panel, .stat-card, .skill-card, .media-card, .note-card, .orbit-card, .contact-box"
+        );
+
+        revealElements.forEach((el, index) => {
+            el.classList.add("reveal");
+            el.style.transitionDelay = `${index * 0.08}s`;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>

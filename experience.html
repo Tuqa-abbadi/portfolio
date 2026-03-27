@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience | Tuqa AL-Dowikat</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+
+        <header class="topbar">
+            <div class="brand">TUQA AL-DOWIKAT</div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="skills.html">Skills</a>
+                <a href="social.html">Social</a>
+                <a href="geeky.html">Geeky</a>
+                <a class="active" href="experience.html">Experience</a>
+            </nav>
+        </header>
+
+        <main class="page-content">
+
+            <!-- HEADER -->
+            <section class="page-header">
+                <div class="panel">
+                    <span class="section-label">Experience</span>
+                    <h1 class="page-title">My <span class="accent-cyan">Journey</span></h1>
+
+                    <p class="page-copy">
+                        My experience combines social media work, academic coordination,
+                        and volunteering in student communities, with a strong focus on communication,
+                        organization, and creative content.
+                    </p>
+                </div>
+
+                <div class="panel avatar-panel">
+                    <img src="assets/img/peek.png" alt="Tuqa avatar" />
+                </div>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section class="grid-3">
+
+                <!-- Araak Dental -->
+                <div class="skill-card">
+                    <span class="section-label">Work</span>
+                    <h3>Araak Dental Center</h3>
+
+                    <p>
+                        Social Media Marketer 2023 - 2025 focused on content creation and improving engagement.
+                    </p>
+
+                    <ul class="list-clean">
+                        <li>Designing posts and visuals</li>
+                        <li>Managing platforms</li>
+                        <li>Enhancing audience interaction</li>
+                        <li>Campaign advertising </li>
+                    </ul>
+                </div>
+
+                <!-- Araak Academy -->
+                <div class="skill-card">
+                    <span class="section-label">Work</span>
+                    <h3>Araak Academy</h3>
+
+                    <p>
+                        Academic Coordinator 2023 - 2025 in a medical training academy.
+                    </p>
+
+                    <ul class="list-clean">
+                        <li>Managing participants</li>
+                        <li>Organizing courses</li>
+                        <li>Handling communication</li>
+                        <li>campaign advertising </li>
+                    </ul>
+                </div>
+                <!-- IEEE -->
+                <div class="skill-card">
+                    <span class="section-label">Volunteering</span>
+                    <h3>IEEE Computer Society – UJ</h3>
+
+                    <p>
+                        Social Media Leader 2024 - 2025 responsible for managing content and visual communication.
+                    </p>
+
+                    <ul class="list-clean">
+                        <li>Content creation </li>
+                        <li>Team coordination</li>
+                        <li>Managing social media presence</li>
+                    </ul>
+                </div>
+
+            </section>
+
+
+
+            <p class="footer-note">
+                Experience in social media, coordination, and content creation, with continuous growth in creative and
+                technical skills.
+            </p>
+
+        </main>
+    </div>
+    <script>
+        const revealElements = document.querySelectorAll(
+            ".panel, .stat-card, .skill-card, .media-card, .note-card, .orbit-card, .contact-box"
+        );
+
+        revealElements.forEach((el, index) => {
+            el.classList.add("reveal");
+            el.style.transitionDelay = `${index * 0.08}s`;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>

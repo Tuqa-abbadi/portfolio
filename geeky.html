@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geeky | Tuqa Al-Dowikat</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">TUQA AL-DOWIKAT</div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="skills.html">Skills</a>
+                <a href="social.html">Social</a>
+                <a class="active" href="geeky.html">Geeky</a>
+                <a href="experience.html">Experience</a>
+            </nav>
+        </header>
+
+        <main class="page-content">
+
+            <!-- INTRO -->
+            <section class="page-header">
+                <div class="panel">
+                    <span class="section-label">Geeky</span>
+                    <h1 class="page-title">Learning & <span class="accent-cyan">building</span></h1>
+
+                    <p class="page-copy">
+                        I am still developing my technical skills, but I enjoy building small projects,
+                        exploring app ideas, and learning how systems work behind the scenes.
+                    </p>
+
+                    <p class="page-copy">
+                        My main interest is in UI/UX and app development, and I aim to create
+                        digital products that are both functional and visually clear.
+                    </p>
+
+                    <div class="contact-row">
+                        <div class="contact-pill">UI/UX</div>
+                        <div class="contact-pill">App Development</div>
+                        <div class="contact-pill">Learning</div>
+                    </div>
+                </div>
+
+                <div class="panel avatar-panel">
+                    <img src="assets/img/coding.png" alt="Geeky avatar" />
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="grid-2">
+
+                <!-- PROJECT 1 -->
+                <div class="note-card">
+                    <span class="section-label">Project 01</span>
+                    <h3>StudyPal App</h3>
+
+                    <p>
+                        A student productivity app designed to help manage tasks and study sessions using a simple and
+                        organized interface.
+                    </p>
+
+                    <ul class="list-clean">
+                        <li>Built using Java in Android Studio</li>
+                        <li>Includes task tracking and study session features</li>
+                        <li>Focus on usability and clean UI structure</li>
+                    </ul>
+
+                    <p>
+                        This project reflects my interest in building useful applications and improving user experience
+                        in mobile apps.
+                    </p>
+
+                    <a class="github-btn" href="https://github.com/Tuqa-abbadi/studypal" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="note-card">
+                    <span class="section-label">Project 02</span>
+                    <h3>Skill Exchange Web App</h3>
+
+                    <p>
+                        A web application that allows users to exchange skills through interactive sessions.
+                        The platform is designed to connect people who want to learn and teach different skills
+                        in a simple and accessible way.
+                    </p>
+
+                    <ul class="list-clean">
+                        <li>Built using React.js with a component-based structure</li>
+                        <li>Responsive design using Tailwind CSS</li>
+                        <li>Simulates real user interactions (login, sessions, user profiles)</li>
+                        <li>Works across desktop and mobile browsers</li>
+                    </ul>
+
+                    <p>
+                        This project helped me understand how frontend systems are structured,
+                        and strengthened my interest in UI/UX and interactive web applications.
+                    </p>
+
+                    <a class="github-btn" href="https://github.com/Tuqa-abbadi/skillswap" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- INTEREST -->
+            <section class="grid-2">
+
+                <div class="skill-card">
+                    <span class="section-label">What I’m interested in</span>
+                    <ul class="list-clean">
+                        <li>UI/UX design</li>
+                        <li>Mobile app development</li>
+                        <li>Clean and modern interfaces</li>
+                        <li>Creative digital experiences</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <span class="section-label">Currently learning</span>
+                    <ul class="list-clean">
+                        <li>Improving UI design skills</li>
+                        <li>Better app structure</li>
+                        <li>Frontend development</li>
+                        <li>Project organization</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <p class="footer-note">
+                I’m continuously learning and improving, with a growing focus on UI/UX and app development.
+            </p>
+
+        </main>
+    </div>
+    <script>
+        const revealElements = document.querySelectorAll(
+            ".panel, .stat-card, .skill-card, .media-card, .note-card, .orbit-card, .contact-box"
+        );
+
+        revealElements.forEach((el, index) => {
+            el.classList.add("reveal");
+            el.style.transitionDelay = `${index * 0.08}s`;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Tuqa AL-Dowikat</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">TUQA AL-DOWIKAT</div>
+            <nav class="nav"><a href="index.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a class="active" href="skills.html">Skills</a>
+                <a href="social.html">Social</a>
+                <a href="geeky.html">Geeky</a><a href="experience.html">Experience</a>
+            </nav>
+        </header>
+        <main class="page-content">
+            <section class="page-header">
+                <div class="panel"><span class="section-label">Skills</span>
+                    <h1 class="page-title"><span class="accent-cyan">Skills</span> & tools</h1>
+                    <p class="page-copy">I enjoy turning ideas into visuals and digital experiences, whether through
+                        social media content, editing, or simple applications.</p>
+                    <p class="page-copy"> I focus on clean design, engaging content, and continuously developing my
+                        skills in UI/UX and
+                        app development.</p>
+                </div>
+                <div class="panel avatar-panel"><img src="assets/img/coding.png" alt="Coding Tuqa avatar" /></div>
+            </section>
+            <section class="grid-3">
+
+                <!-- CORE -->
+                <div class="skill-card">
+                    <span class="section-label">Core Skills</span>
+                    <ul class="list-clean">
+                        <li>HTML / CSS</li>
+                        <li>Basic JavaScript</li>
+                        <li>UI Layout Design</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <!-- CREATIVE -->
+                <div class="skill-card">
+                    <span class="section-label">Creative Tools</span>
+                    <ul class="list-clean">
+                        <li>CapCut</li>
+                        <li>Premiere Pro</li>
+                        <li>Photoshop</li>
+                        <li>Canva </li>
+                    </ul>
+                </div>
+
+                <!-- LEARNING -->
+                <div class="skill-card learning-card">
+                    <span class="section-label">Currently Learning</span>
+                    <ul class="list-clean">
+                        <li>After Effects</li>
+                        <li>Flutter (App Development)</li>
+                        <li>Figma (UI/UX Design)</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- CERTIFICATES -->
+            <section>
+                <!----   <h2 class="page-title">Certificates</h2>-->
+
+                <div class="grid-2">
+
+                    <div class="panel">
+                        <span class="section-label">Certificate</span>
+                        <h3>Social Media & Design</h3>
+                        <p>Princess Sumaya University for Technology</p>
+
+                        <ul class="list-clean">
+                            <li>70 training hours</li>
+                            <li>Certified by Higher Education</li>
+                        </ul>
+                    </div>
+
+                    <div class="panel">
+                        <span class="section-label">Certificate</span>
+                        <h3>Adobe Premiere</h3>
+                        <p>Princess Sumaya University for Technology</p>
+
+                        <ul class="list-clean">
+                            <li>25 training hours</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+            <section class="grid-2">
+                <div class="note-card">
+                    <h2>Geeky side</h2>
+                    <p>I enjoy application ideas, structured layouts, user-friendly design, and turning rough concepts
+                        into usable screens.</p>
+                </div>
+                <div class="note-card">
+                    <h2>Soft skills</h2>
+                    <p>Communication, organizing, teamwork, creative thinking, and working on university projects and
+                        events.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        const revealElements = document.querySelectorAll(
+            ".panel, .stat-card, .skill-card, .media-card, .note-card, .orbit-card, .contact-box"
+        );
+
+        revealElements.forEach((el, index) => {
+            el.classList.add("reveal");
+            el.style.transitionDelay = `${index * 0.08}s`;
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+<p class="footer-note">
+    I’m continuously improving my skills, especially in UI/UX design and app development,
+    while exploring new tools and creative workflows.
+</p>
+
+</html>
