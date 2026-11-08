@@ -9,6 +9,18 @@
 </head>
 
 <body>
+    <!-- Reusable inline icons (no external icon library needed) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="icon-github" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+        </symbol>
+        <symbol id="icon-external" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+                d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+        </symbol>
+    </svg>
+
     <div class="page-shell">
         <header class="topbar">
             <div class="brand">TUQA AL-DOWIKAT</div>
@@ -31,19 +43,19 @@
                     <h1 class="page-title">Learning & <span class="accent-cyan">building</span></h1>
 
                     <p class="page-copy">
-                        I am still developing my technical skills, but I enjoy building small projects,
-                        exploring app ideas, and learning how systems work behind the scenes.
+                        Alongside my creative work, I keep building my technical skills through real projects,
+                        from my graduation project to Android and web applications.
                     </p>
 
                     <p class="page-copy">
-                        My main interest is in UI/UX and app development, and I aim to create
+                        My main interest is in UI/UX and mobile app development, and I aim to create
                         digital products that are both functional and visually clear.
                     </p>
 
                     <div class="contact-row">
                         <div class="contact-pill">UI/UX</div>
                         <div class="contact-pill">App Development</div>
-                        <div class="contact-pill">Learning</div>
+                        <div class="contact-pill">Web Projects</div>
                     </div>
                 </div>
 
@@ -52,63 +64,222 @@
                 </div>
             </section>
 
-            <!-- PROJECTS -->
-            <section class="grid-2">
+            <div class="section-heading">
+                <h2>Development <span class="accent-cyan">projects</span></h2>
+            </div>
 
-                <!-- PROJECT 1 -->
-                <div class="note-card">
-                    <span class="section-label">Project 01</span>
-                    <h3>StudyPal App</h3>
+            <!-- PROJECT 1: SCOPS (Graduation Project) -->
+            <section class="panel project-feature project-featured" aria-labelledby="scops-title">
+                <div class="project-info">
+                    <span class="section-label label-cyan">Graduation Project</span>
+                    <h2 class="project-title" id="scops-title">SCOPS</h2>
+                    <p class="project-subtitle">Smart Control of Paid System</p>
 
-                    <p>
-                        A student productivity app designed to help manage tasks and study sessions using a simple and
-                        organized interface.
+                    <p class="project-copy">
+                        A mobile application concept for managing subscriptions and recurring payments in one place.
+                        SCOPS helps users:
                     </p>
 
                     <ul class="list-clean">
-                        <li>Built using Java in Android Studio</li>
-                        <li>Includes task tracking and study session features</li>
-                        <li>Focus on usability and clean UI structure</li>
+                        <li>Track subscriptions and recurring expenses</li>
+                        <li>Understand their subscription spending</li>
+                        <li>Get reminders about upcoming renewals</li>
+                        <li>Avoid unwanted recurring payments</li>
                     </ul>
 
-                    <p>
-                        This project reflects my interest in building useful applications and improving user experience
-                        in mobile apps.
-                    </p>
+                    <div class="tech-badges" aria-label="Technologies">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                    </div>
 
-                    <a class="github-btn" href="https://github.com/Tuqa-abbadi/studypal" target="_blank">
-                        View on GitHub
+                    <div class="project-actions">
+                        <a class="github-btn" href="https://github.com/Tuqa-abbadi/SCOPS-Frontend" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="btn-icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/Cv_4JavyY1M"
+                            title="SCOPS: Smart Control of Paid System, graduation project video" loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT 2: StudyPal -->
+            <section class="panel project-feature project-stack" aria-labelledby="studypal-title">
+                <div class="project-info">
+                    <span class="section-label">Android Application</span>
+                    <h2 class="project-title" id="studypal-title">StudyPal</h2>
+                    <p class="project-subtitle">Smart Study Companion</p>
+
+                    <div class="project-info-cols">
+                        <div>
+                            <p class="project-copy">
+                                An Android productivity app that helps students organize academic tasks, manage
+                                study sessions, and track their progress. Built with Java in Android Studio.
+                            </p>
+
+                            <div class="tech-badges" aria-label="Technologies">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">Android Studio</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a class="github-btn" href="https://github.com/Tuqa-abbadi/studypal"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <svg class="btn-icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="list-clean feature-columns">
+                            <li>Create and manage tasks</li>
+                            <li>Assign dates and times to tasks</li>
+                            <li>Track task completion</li>
+                            <li>Daily progress visualization</li>
+                            <li>Pomodoro focus timer</li>
+                            <li>25-minute focus sessions &amp; short breaks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-media screens-carousel" role="region" aria-roledescription="carousel"
+                    aria-label="StudyPal app screenshots">
+                    <div class="carousel-header">
+                        <span class="carousel-status" id="studypal-status" aria-live="polite">1 / 6</span>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn" type="button" data-target="studypal-track"
+                                data-direction="prev" aria-label="Previous screenshot">&#10094;</button>
+                            <button class="carousel-btn" type="button" data-target="studypal-track"
+                                data-direction="next" aria-label="Next screenshot">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-track snap-track" id="studypal-track" data-status="studypal-status"
+                        tabindex="0" aria-label="StudyPal screenshots, scroll or swipe to browse">
+                        <figure class="carousel-item screen-item" aria-roledescription="slide" aria-label="1 of 6">
+                            <img src="assets/img/studypal/studypal-profile.webp" width="340" height="766"
+                                alt="StudyPal user information screen with avatar, name and email fields, and a Save button"
+                                loading="lazy" />
+                            <figcaption>User information</figcaption>
+                        </figure>
+                        <figure class="carousel-item screen-item" aria-roledescription="slide" aria-label="2 of 6">
+                            <img src="assets/img/studypal/studypal-today-tasks.webp" width="316" height="690"
+                                alt="StudyPal Today Tasks screen listing tasks with times, dates and completion checkboxes"
+                                loading="lazy" />
+                            <figcaption>Today's tasks</figcaption>
+                        </figure>
+                        <figure class="carousel-item screen-item" aria-roledescription="slide" aria-label="3 of 6">
+                            <img src="assets/img/studypal/studypal-new-task.webp" width="344" height="766"
+                                alt="StudyPal New Task screen with task name, category, date and time fields and an Add Task button"
+                                loading="lazy" />
+                            <figcaption>Task creation</figcaption>
+                        </figure>
+                        <figure class="carousel-item screen-item" aria-roledescription="slide" aria-label="4 of 6">
+                            <img src="assets/img/studypal/studypal-date-picker.webp" width="335" height="771"
+                                alt="StudyPal date picker calendar used to choose a task date" loading="lazy" />
+                            <figcaption>Choosing a date</figcaption>
+                        </figure>
+                        <figure class="carousel-item screen-item" aria-roledescription="slide" aria-label="5 of 6">
+                            <img src="assets/img/studypal/studypal-progress.webp" width="342" height="775"
+                                alt="StudyPal progress screen with a circular indicator of completed tasks"
+                                loading="lazy" />
+                            <figcaption>Progress tracking</figcaption>
+                        </figure>
+                        <figure class="carousel-item screen-item" aria-roledescription="slide" aria-label="6 of 6">
+                            <img src="assets/img/studypal/studypal-pomodoro.webp" width="339" height="776"
+                                alt="StudyPal Pomodoro timer showing 25:00 with Start and Pause buttons"
+                                loading="lazy" />
+                            <figcaption>Pomodoro timer</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT 3: Skill Exchange (group project) -->
+            <section class="note-card project-card" aria-labelledby="skillswap-title">
+                <div class="project-card-grid">
+                    <div>
+                        <span class="section-label">Group Web Project</span>
+                        <h2 class="project-title" id="skillswap-title">Skill Exchange Web App</h2>
+
+                        <p>
+                            A web application that allows users to exchange skills through interactive sessions.
+                            The platform is designed to connect people who want to learn and teach different skills
+                            in a simple and accessible way. Built as a <strong>team project</strong>.
+                        </p>
+
+                        <p>
+                            This project helped me understand how frontend systems are structured,
+                            and strengthened my interest in UI/UX and interactive web applications.
+                        </p>
+                    </div>
+
+                    <div>
+                        <ul class="list-clean">
+                            <li>Built using React.js with a component-based structure</li>
+                            <li>Responsive design using Tailwind CSS</li>
+                            <li>Simulates real user interactions (login, sessions, user profiles)</li>
+                            <li>Works across desktop and mobile browsers</li>
+                        </ul>
+
+                        <div class="tech-badges tech-badges-dark" aria-label="Technologies">
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                        </div>
+
+                        <a class="github-btn" href="https://github.com/Tuqa-abbadi/skillswap" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="btn-icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFESSIONAL WEB WORK -->
+            <div class="section-heading">
+                <h2>Professional <span class="accent-sand">web work</span></h2>
+            </div>
+
+            <section class="panel project-feature" aria-labelledby="araak-title">
+                <div class="project-media">
+                    <a class="browser-frame" href="https://araak-dental-website.tuqadwikat.workers.dev/en/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Open the Araak Dental Center website">
+                        <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <img src="assets/img/araak-dental-preview.webp" width="1200" height="675"
+                            alt="Homepage of the Araak Dental Center website" loading="lazy" />
                     </a>
                 </div>
 
-                <!-- PROJECT 2 -->
-                <div class="note-card">
-                    <span class="section-label">Project 02</span>
-                    <h3>Skill Exchange Web App</h3>
+                <div class="project-info">
+                    <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>Live Website ·
+                        In Development</span>
+                    <h2 class="project-title" id="araak-title">Araak Dental Center Website</h2>
 
-                    <p>
-                        A web application that allows users to exchange skills through interactive sessions.
-                        The platform is designed to connect people who want to learn and teach different skills
-                        in a simple and accessible way.
+                    <p class="project-copy">
+                        An ongoing website development project for Araak Dental Center, focused on creating an
+                        engaging digital presence, presenting the clinic's services, and improving the online user
+                        experience.
                     </p>
 
-                    <ul class="list-clean">
-                        <li>Built using React.js with a component-based structure</li>
-                        <li>Responsive design using Tailwind CSS</li>
-                        <li>Simulates real user interactions (login, sessions, user profiles)</li>
-                        <li>Works across desktop and mobile browsers</li>
-                    </ul>
-
-                    <p>
-                        This project helped me understand how frontend systems are structured,
-                        and strengthened my interest in UI/UX and interactive web applications.
-                    </p>
-
-                    <a class="github-btn" href="https://github.com/Tuqa-abbadi/skillswap" target="_blank">
-                        View on GitHub
-                    </a>
+                    <div class="project-actions">
+                        <a class="github-btn" href="https://araak-dental-website.tuqadwikat.workers.dev/en/"
+                            target="_blank" rel="noopener noreferrer">
+                            Visit Live Website
+                            <svg class="btn-icon" aria-hidden="true"><use href="#icon-external"></use></svg>
+                        </a>
+                    </div>
                 </div>
-
             </section>
 
             <!-- INTEREST -->
@@ -127,8 +298,8 @@
                 <div class="skill-card">
                     <span class="section-label">Currently learning</span>
                     <ul class="list-clean">
-                        <li>Improving UI design skills</li>
-                        <li>Better app structure</li>
+                        <li>Flutter and mobile app structure</li>
+                        <li>UI/UX design in Figma</li>
                         <li>Frontend development</li>
                         <li>Project organization</li>
                     </ul>
@@ -149,7 +320,7 @@
 
         revealElements.forEach((el, index) => {
             el.classList.add("reveal");
-            el.style.transitionDelay = `${index * 0.08}s`;
+            el.style.transitionDelay = `${Math.min(index, 4) * 0.08}s`;
         });
 
         const observer = new IntersectionObserver((entries) => {
@@ -163,6 +334,50 @@
         });
 
         revealElements.forEach((el) => observer.observe(el));
+    </script>
+    <script>
+        // StudyPal screenshot carousel: arrows scroll one slide, native swipe/scroll for touch.
+        document.querySelectorAll(".snap-track").forEach((track) => {
+            const slides = Array.from(track.querySelectorAll(".carousel-item"));
+            const status = document.getElementById(track.dataset.status);
+            const prev = document.querySelector(`[data-target="${track.id}"][data-direction="prev"]`);
+            const next = document.querySelector(`[data-target="${track.id}"][data-direction="next"]`);
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            const step = () => {
+                const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+                return slides[0].offsetWidth + gap;
+            };
+
+            const update = () => {
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                const index = Math.min(slides.length - 1, Math.round(track.scrollLeft / step()));
+                if (status) status.textContent = `${index + 1} / ${slides.length}`;
+                if (prev) prev.disabled = track.scrollLeft <= 2;
+                if (next) next.disabled = track.scrollLeft >= maxScroll - 2;
+            };
+
+            const move = (dir) => {
+                track.scrollBy({ left: dir * step(), behavior: reduceMotion ? "auto" : "smooth" });
+            };
+
+            if (prev) prev.addEventListener("click", () => move(-1));
+            if (next) next.addEventListener("click", () => move(1));
+
+            track.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowRight") { e.preventDefault(); move(1); }
+                if (e.key === "ArrowLeft") { e.preventDefault(); move(-1); }
+            });
+
+            let ticking = false;
+            track.addEventListener("scroll", () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => { update(); ticking = false; });
+            }, { passive: true });
+            window.addEventListener("resize", update);
+            update();
+        });
     </script>
 </body>
 
